@@ -1,0 +1,818 @@
+<html>
+
+<head>
+  <title> Ayalaan - Realtime Tamil Unicode Typing and Fonts Converter </title>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="True" name="HandheldFriendly">
+  <link href="img/favicon.ico" rel="shortcut icon">
+  <link href="https://ayalaan.lk.com/" rel="canonical">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/css.css">
+
+</head>
+<body>
+
+<nav class="navbar ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo.webp" alt="Tamil Typing Ayalaan" width="40" height="40" class="d-inline-block align-text-top">
+      
+    </a>
+    <h1>Ayalaan</h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <hr>
+          <a href="#"rel=”nofollow” target=”_blank”>Privacy Policy</a>
+          <hr>
+          <a href="#"rel=”nofollow” target=”_blank”>Terms and Conditions</a>
+          <hr>
+          <a href="#" rel=”nofollow” target=”_blank”>Contact Us</a>
+        <hr>
+         
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+</br>
+
+</br>
+    
+  <div class="container  ">
+    <div class="row">
+      <div class="col-md-8">
+    <form id="txtBox">
+      <div class="form-group">
+        <textarea class="form-control" id="box1" rows="3" placeholder="Type here ..." oninput="startText()"></textarea>
+        <input class="btn float-end  mt-1"  data-trigger="focus" type="reset" value="Reset">
+        
+
+      
+      </div>
+    </br>
+  </br>
+      <div class="form-group">
+        <label for="box2"> <h2>Unicode:</h2></label>
+        <textarea class="form-control" id="box2" rows="3" readonly></textarea>
+        <input class="btn float-end mt-1" id="copy1" onclick="copyText2()" type="button" value="Copy">
+        
+       
+      </div>
+    </br>
+  </br>
+      <div class="form-group ">
+        <label for="box3"> <h2> Font: </h2></label>
+        <textarea class="form-control " id="box3" rows="3" readonly ></textarea>
+        <input class="btn float-end mt-1"  id="copy2" onclick="copyText1()" type="button" value="Copy">
+        
+      </div>
+    </div>
+    <div class="col-4 col-md-4  ">
+      <div class="side  ">
+       <p>Study our Schema to get an idea of ​​how to type here.</p>
+      <button type="button" class="btn btn-primary btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Typing Schema/Help </button> </br> </br>
+      <p>This project is maintained by its users. You can also contribute.</p>
+      <button type="button" class="btn btn-primary btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#don">☕️ Become a Donor</button> </br> </br>
+    
+    </div>
+ 
+  </div>
+    </form>
+  </div>
+ 
+
+<!-- Modal for don-->
+<div class="modal fade" id="don" tabindex="-1" aria-labelledby="don" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+  <div class="modal-header">
+  <h5 class="modal-title" id="don">Donate</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <img class="donimg" src="img/payment.jpeg" alt="lankapay" width="200" height="200">
+    <p>You can donate any amount for the future existence of this project and the donated money will not be released for any reason and it will be used for maintenance work here. Thank you!</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  </div>
+  </div>
+  </div>
+  </div>  
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fs-5" id="exampleModalLabel">Typing Schema</h5>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+<li>njau= "ஞௌ"</li>
+<li>njai= "ஞை"</li>
+<li>njee= "ஞே"</li>
+<li>njoo= "ஞோ"</li>
+<li>njaa= "ஞா"</li>
+<li>njuu= "ஞூ"</li>
+<li>njii= "ஞீ"</li>
+<li>nja= "ஞ"</li>
+<li>nji= "ஞி"</li>
+<li>njI= "ஞீ"</li>
+<li>njA= "ஞா"</li>
+<li>nje= "ஞெ"</li>
+<li>njE= "ஞே"</li>
+<li>njo= "ஞொ"</li>
+<li>njO= "ஞோ"</li>
+<li>nju= "ஞு"</li>
+<li>njU= "ஞூ"</li>
+<li>nj= "ஞ்"</li>
+<li>ngau= "ஙௌ"</li>
+<li>ngai= "ஙை"</li>
+<li>ngee= "ஙே"</li>
+<li>ngoo= "ஙோ"</li>
+<li>ngaa= "ஙா"</li>
+<li>nguu= "ஙூ"</li>
+<li>ngii= "ஙீ"</li>
+<li>nga= "ங"</li>
+<li>ngi= "ஙி"</li>
+<li>ngI= "ஙீ"</li>
+<li>ngA= "ஙா"</li>
+<li>nge= "ஙெ"</li>
+<li>ngE= "ஙே"</li>
+<li>ngo= "ஙொ"</li>
+<li>ngO= "ஙோ"</li>
+<li>ngu= "ஙு"</li>
+<li>ngU= "ஙூ"</li>
+<li>ng= "ங்"</li>
+<li>shau= "ஷௌ"</li>
+<li>shai= "ஷை"</li>
+<li>shee= "ஷே"</li>
+<li>shoo= "ஷோ"</li>
+<li>shaa= "ஷா"</li>
+<li>shuu= "ஷூ"</li>
+<li>shii= "ஷீ"</li>
+<li>sha= "ஷ"</li>
+<li>shi= "ஷி"</li>
+<li>shI= "ஷீ"</li>
+<li>shA= "ஷா"</li>
+<li>she= "ஷெ"</li>
+<li>shE= "ஷே"</li>
+<li>sho= "ஷொ"</li>
+<li>shO= "ஷோ"</li>
+<li>shu= "ஷு"</li>
+<li>shU= "ஷூ"</li>
+<li>sh= "ஷ்"</li>
+<li> nau= " நௌ"</li>
+<li> nai= " நை"</li>
+<li> nee= " நே"</li>
+<li> noo= " நோ"</li>
+<li> naa= " நா"</li>
+<li> nuu= " நூ"</li>
+<li> nii= " நீ"</li>
+<li> na= " ந"</li>
+<li> ni= " நி"</li>
+<li> nI= " நீ"</li>
+<li> nA= " நா"</li>
+<li> ne= " நெ"</li>
+<li> nE= " நே"</li>
+<li> no= " நொ"</li>
+<li> nO= " நோ"</li>
+<li> nu= " நு"</li>
+<li> nU= " நூ"</li>
+<li> nth= " ந்"</li>
+<li>-nau= "நௌ"</li>
+<li>-nai= "நை"</li>
+<li>-nee= "நே"</li>
+<li>-noo= "நோ"</li>
+<li>-naa= "நா"</li>
+<li>-nuu= "நூ"</li>
+<li>-nii= "நீ"</li>
+<li>-na= "ந"</li>
+<li>-ni= "நி"</li>
+<li>-nI= "நீ"</li>
+<li>-nA= "நா"</li>
+<li>-ne= "நெ"</li>
+<li>-nE= "நே"</li>
+<li>-no= "நொ"</li>
+<li>-nO= "நோ"</li>
+<li>-nu= "நு"</li>
+<li>-nU= "நூ"</li>
+<li>n-au= "நௌ"</li>
+<li>n-ai= "நை"</li>
+<li>n-ee= "நே"</li>
+<li>n-oo= "நோ"</li>
+<li>n-aa= "நா"</li>
+<li>n-uu= "நூ"</li>
+<li>n-ii= "நீ"</li>
+<li>n-a= "ந"</li>
+<li>n-i= "நி"</li>
+<li>n-I= "நீ"</li>
+<li>n-A= "நா"</li>
+<li>n-e= "நெ"</li>
+<li>n-E= "நே"</li>
+<li>n-o= "நொ"</li>
+<li>n-O= "நோ"</li>
+<li>n-u= "நு"</li>
+<li>n-U= "நூ"</li>
+<li>wau= "நௌ"</li>
+<li>wai= "நை"</li>
+<li>wee= "நே"</li>
+<li>woo= "நோ"</li>
+<li>waa= "நா"</li>
+<li>wuu= "நூ"</li>
+<li>wii= "நீ"</li>
+<li>wa= "ந"</li>
+<li>wi= "நி"</li>
+<li>wI= "நீ"</li>
+<li>wA= "நா"</li>
+<li>we= "நெ"</li>
+<li>wE= "நே"</li>
+<li>wo= "நொ"</li>
+<li>wO= "நோ"</li>
+<li>wu= "நு"</li>
+<li>wU= "நூ"</li>
+<li> n= " ந்"</li>
+<li>n-= "ந்"</li>
+<li>-n= "ந்"</li>
+<li>w= "ந்"</li>
+<li>nthau= "ந்தௌ"</li>
+<li>nthai= "ந்தை"</li>
+<li>nthee= "ந்தே"</li>
+<li>nthoo= "ந்தோ"</li>
+<li>nthaa= "ந்தா"</li>
+<li>nthuu= "ந்தூ"</li>
+<li>nthii= "ந்தீ"</li>
+<li>ntha= "ந்த"</li>
+<li>nthi= "ந்தி"</li>
+<li>nthI= "ந்தீ"</li>
+<li>nthA= "ந்தா"</li>
+<li>nthe= "ந்தெ"</li>
+<li>nthE= "ந்தே"</li>
+<li>ntho= "ந்தொ"</li>
+<li>nthO= "ந்தோ"</li>
+<li>nthu= "ந்து"</li>
+<li>nthU= "ந்தூ"</li>
+<li>nth= "ந்"</li>
+<li>dhau= "தௌ"</li>
+<li>dhai= "தை"</li>
+<li>dhee= "தே"</li>
+<li>dhoo= "தோ"</li>
+<li>dhaa= "தா"</li>
+<li>dhuu= "தூ"</li>
+<li>dhii= "தீ"</li>
+<li>dha= "த"</li>
+<li>dhi= "தி"</li>
+<li>dhI= "தீ"</li>
+<li>dhA= "தா"</li>
+<li>dhe= "தெ"</li>
+<li>dhE= "தே"</li>
+<li>dho= "தொ"</li>
+<li>dhO= "தோ"</li>
+<li>dhu= "து"</li>
+<li>dhU= "தூ"</li>
+<li>dh= "த்"</li>
+<li>chau= "சௌ"</li>
+<li>chai= "சை"</li>
+<li>chee= "சே"</li>
+<li>choo= "சோ"</li>
+<li>chaa= "சா"</li>
+<li>chuu= "சூ"</li>
+<li>chii= "சீ"</li>
+<li>cha= "ச"</li>
+<li>chi= "சி"</li>
+<li>chI= "சீ"</li>
+<li>chA= "சா"</li>
+<li>che= "செ"</li>
+<li>chE= "சே"</li>
+<li>cho= "சொ"</li>
+<li>chO= "சோ"</li>
+<li>chu= "சு"</li>
+<li>chU= "சூ"</li>
+<li>ch= "ச்"</li>
+<li>zhau= "ழௌ"</li>
+<li>zhai= "ழை"</li>
+<li>zhee= "ழே"</li>
+<li>zhoo= "ழோ"</li>
+<li>zhaa= "ழா"</li>
+<li>zhuu= "ழூ"</li>
+<li>zhii= "ழீ"</li>
+<li>zha= "ழ"</li>
+<li>zhi= "ழி"</li>
+<li>zhI= "ழீ"</li>
+<li>zhA= "ழா"</li>
+<li>zhe= "ழெ"</li>
+<li>zhE= "ழே"</li>
+<li>zho= "ழொ"</li>
+<li>zhO= "ழோ"</li>
+<li>zhu= "ழு"</li>
+<li>zhU= "ழூ"</li>
+<li>zh= "ழ்"</li>
+<li>zau= "ழௌ"</li>
+<li>zai= "ழை"</li>
+<li>zee= "ழே"</li>
+<li>zoo= "ழோ"</li>
+<li>zaa= "ழா"</li>
+<li>zuu= "ழூ"</li>
+<li>zii= "ழீ"</li>
+<li>za= "ழ"</li>
+<li>zi= "ழி"</li>
+<li>zI= "ழீ"</li>
+<li>zA= "ழா"</li>
+<li>ze= "ழெ"</li>
+<li>zE= "ழே"</li>
+<li>zo= "ழொ"</li>
+<li>zO= "ழோ"</li>
+<li>zu= "ழு"</li>
+<li>zU= "ழூ"</li>
+<li>z= "ழ்"</li>
+<li>jau= "ஜௌ"</li>
+<li>jai= "ஜை"</li>
+<li>jee= "ஜே"</li>
+<li>joo= "ஜோ"</li>
+<li>jaa= "ஜா"</li>
+<li>juu= "ஜூ"</li>
+<li>jii= "ஜீ"</li>
+<li>ja= "ஜ"</li>
+<li>ji= "ஜி"</li>
+<li>jI= "ஜீ"</li>
+<li>jA= "ஜா"</li>
+<li>je= "ஜெ"</li>
+<li>jE= "ஜே"</li>
+<li>jo= "ஜொ"</li>
+<li>jO= "ஜோ"</li>
+<li>ju= "ஜு"</li>
+<li>jU= "ஜூ"</li>
+<li>j= "ஜ்"</li>
+<li>thau= "தௌ"</li>
+<li>thai= "தை"</li>
+<li>thee= "தே"</li>
+<li>thoo= "தோ"</li>
+<li>thaa= "தா"</li>
+<li>thuu= "தூ"</li>
+<li>thii= "தீ"</li>
+<li>tha= "த"</li>
+<li>thi= "தி"</li>
+<li>thI= "தீ"</li>
+<li>thA= "தா"</li>
+<li>the= "தெ"</li>
+<li>thE= "தே"</li>
+<li>tho= "தொ"</li>
+<li>thO= "தோ"</li>
+<li>thu= "து"</li>
+<li>thU= "தூ"</li>
+<li>th= "த்"</li>
+<li>-hau= "ஹௌ"</li>
+<li>-hai= "ஹை"</li>
+<li>-hee= "ஹே"</li>
+<li>-hoo= "ஹோ"</li>
+<li>-haa= "ஹா"</li>
+<li>-huu= "ஹூ"</li>
+<li>-hii= "ஹீ"</li>
+<li>-ha= "ஹ"</li>
+<li>-hi= "ஹி"</li>
+<li>-hI= "ஹீ"</li>
+<li>-hA= "ஹா"</li>
+<li>-he= "ஹெ"</li>
+<li>-hE= "ஹே"</li>
+<li>-ho= "ஹொ"</li>
+<li>-hO= "ஹோ"</li>
+<li>-hu= "ஹு"</li>
+<li>-hU= "ஹூ"</li>
+<li>-h= "ஹ்"</li>
+<li>hau= "கௌ"</li>
+<li>hai= "கை"</li>
+<li>hee= "கே"</li>
+<li>hoo= "கோ"</li>
+<li>haa= "கா"</li>
+<li>huu= "கூ"</li>
+<li>hii= "கீ"</li>
+<li>ha= "க"</li>
+<li>hi= "கி"</li>
+<li>hI= "கீ"</li>
+<li>hA= "கா"</li>
+<li>he= "கெ"</li>
+<li>hE= "கே"</li>
+<li>ho= "கொ"</li>
+<li>hO= "கோ"</li>
+<li>hu= "கு"</li>
+<li>hU= "கூ"</li>
+<li>h= "க்"</li>
+<li>kau= "கௌ"</li>
+<li>kai= "கை"</li>
+<li>kee= "கே"</li>
+<li>koo= "கோ"</li>
+<li>kaa= "கா"</li>
+<li>kuu= "கூ"</li>
+<li>kii= "கீ"</li>
+<li>ka= "க"</li>
+<li>ki= "கி"</li>
+<li>kI= "கீ"</li>
+<li>kA= "கா"</li>
+<li>ke= "கெ"</li>
+<li>kE= "கே"</li>
+<li>ko= "கொ"</li>
+<li>kO= "கோ"</li>
+<li>ku= "கு"</li>
+<li>kU= "கூ"</li>
+<li>k= "க்"</li>
+<li>-sau= "ஸௌ"</li>
+<li>-sai= "ஸை"</li>
+<li>-see= "ஸே"</li>
+<li>-soo= "ஸோ"</li>
+<li>-saa= "ஸா"</li>
+<li>-suu= "ஸூ"</li>
+<li>-sii= "ஸீ"</li>
+<li>-sa= "ஸ"</li>
+<li>-si= "ஸி"</li>
+<li>-sI= "ஸீ"</li>
+<li>-sA= "ஸா"</li>
+<li>-se= "ஸெ"</li>
+<li>-sE= "ஸே"</li>
+<li>-so= "ஸொ"</li>
+<li>-sO= "ஸோ"</li>
+<li>-su= "ஸு"</li>
+<li>-sU= "ஸூ"</li>
+<li>-s= "ஸ்"</li>
+<li>Sau= "ஸௌ"</li>
+<li>Sai= "ஸை"</li>
+<li>See= "ஸே"</li>
+<li>Soo= "ஸோ"</li>
+<li>Saa= "ஸா"</li>
+<li>Suu= "ஸூ"</li>
+<li>Sii= "ஸீ"</li>
+<li>Sa= "ஸ"</li>
+<li>Si= "ஸி"</li>
+<li>SI= "ஸீ"</li>
+<li>SA= "ஸா"</li>
+<li>Se= "ஸெ"</li>
+<li>SE= "ஸே"</li>
+<li>So= "ஸொ"</li>
+<li>SO= "ஸோ"</li>
+<li>Su= "ஸு"</li>
+<li>SU= "ஸூ"</li>
+<li>S= "ஸ்"</li>
+<li>rau= "ரௌ"</li>
+<li>rai= "ரை"</li>
+<li>ree= "ரே"</li>
+<li>roo= "ரோ"</li>
+<li>raa= "ரா"</li>
+<li>ruu= "ரூ"</li>
+<li>rii= "ரீ"</li>
+<li>ra= "ர"</li>
+<li>ri= "ரி"</li>
+<li>rI= "ரீ"</li>
+<li>rA= "ரா"</li>
+<li>re= "ரெ"</li>
+<li>rE= "ரே"</li>
+<li>ro= "ரொ"</li>
+<li>rO= "ரோ"</li>
+<li>ru= "ரு"</li>
+<li>rU= "ரூ"</li>
+<li>r= "ர்"</li>
+<li>Rau= "றௌ"</li>
+<li>Rai= "றை"</li>
+<li>Ree= "றே"</li>
+<li>Roo= "றோ"</li>
+<li>Raa= "றா"</li>
+<li>Ruu= "றூ"</li>
+<li>Rii= "றீ"</li>
+<li>Ra= "ற"</li>
+<li>Ri= "றி"</li>
+<li>RI= "றீ"</li>
+<li>RA= "றா"</li>
+<li>Re= "றெ"</li>
+<li>RE= "றே"</li>
+<li>Ro= "றொ"</li>
+<li>RO= "றோ"</li>
+<li>Ru= "று"</li>
+<li>RU= "றூ"</li>
+<li>R= "ற்"</li>
+<li>tau= "டௌ"</li>
+<li>tai= "டை"</li>
+<li>tee= "டே"</li>
+<li>too= "டோ"</li>
+<li>taa= "டா"</li>
+<li>tuu= "டூ"</li>
+<li>tii= "டீ"</li>
+<li>ta= "ட"</li>
+<li>ti= "டி"</li>
+<li>tI= "டீ"</li>
+<li>tA= "டா"</li>
+<li>te= "டெ"</li>
+<li>tE= "டே"</li>
+<li>to= "டொ"</li>
+<li>tO= "டோ"</li>
+<li>tu= "டு"</li>
+<li>tU= "டூ"</li>
+<li>t= "ட்"</li>
+<li>sau= "சௌ"</li>
+<li>sai= "சை"</li>
+<li>see= "சே"</li>
+<li>soo= "சோ"</li>
+<li>saa= "சா"</li>
+<li>suu= "சூ"</li>
+<li>sii= "சீ"</li>
+<li>sa= "ச"</li>
+<li>si= "சி"</li>
+<li>sI= "சீ"</li>
+<li>sA= "சா"</li>
+<li>se= "செ"</li>
+<li>sE= "சே"</li>
+<li>so= "சொ"</li>
+<li>sO= "சோ"</li>
+<li>su= "சு"</li>
+<li>sU= "சூ"</li>
+<li>s= "ச்"</li>
+<li>pau= "பௌ"</li>
+<li>pai= "பை"</li>
+<li>pee= "பே"</li>
+<li>poo= "போ"</li>
+<li>paa= "பா"</li>
+<li>puu= "பூ"</li>
+<li>pii= "பீ"</li>
+<li>pa= "ப"</li>
+<li>pi= "பி"</li>
+<li>pI= "பீ"</li>
+<li>pA= "பா"</li>
+<li>pe= "பெ"</li>
+<li>pE= "பே"</li>
+<li>po= "பொ"</li>
+<li>pO= "போ"</li>
+<li>pu= "பு"</li>
+<li>pU= "பூ"</li>
+<li>p= "ப்"</li>
+<li>bau= "பௌ"</li>
+<li>bai= "பை"</li>
+<li>bee= "பே"</li>
+<li>boo= "போ"</li>
+<li>baa= "பா"</li>
+<li>buu= "பூ"</li>
+<li>bii= "பீ"</li>
+<li>ba= "ப"</li>
+<li>bi= "பி"</li>
+<li>bI= "பீ"</li>
+<li>bA= "பா"</li>
+<li>be= "பெ"</li>
+<li>bE= "பே"</li>
+<li>bo= "பொ"</li>
+<li>bO= "போ"</li>
+<li>bu= "பு"</li>
+<li>bU= "பூ"</li>
+<li>b= "ப்"</li>
+<li>mau= "மௌ"</li>
+<li>mai= "மை"</li>
+<li>mee= "மே"</li>
+<li>moo= "மோ"</li>
+<li>maa= "மா"</li>
+<li>muu= "மூ"</li>
+<li>mii= "மீ"</li>
+<li>ma= "ம"</li>
+<li>mi= "மி"</li>
+<li>mI= "மீ"</li>
+<li>mA= "மா"</li>
+<li>me= "மெ"</li>
+<li>mE= "மே"</li>
+<li>mo= "மொ"</li>
+<li>mO= "மோ"</li>
+<li>mu= "மு"</li>
+<li>mU= "மூ"</li>
+<li>m= "ம்"</li>
+<li>yau= "யௌ"</li>
+<li>yai= "யை"</li>
+<li>yee= "யே"</li>
+<li>yoo= "யோ"</li>
+<li>yaa= "யா"</li>
+<li>yuu= "யூ"</li>
+<li>yii= "யீ"</li>
+<li>ya= "ய"</li>
+<li>yi= "யி"</li>
+<li>yI= "யீ"</li>
+<li>yA= "யா"</li>
+<li>ye= "யெ"</li>
+<li>yE= "யே"</li>
+<li>yo= "யொ"</li>
+<li>yO= "யோ"</li>
+<li>yu= "யு"</li>
+<li>yU= "யூ"</li>
+<li>y= "ய்"</li>
+<li>dau= "டௌ"</li>
+<li>dai= "டை"</li>
+<li>dee= "டே"</li>
+<li>doo= "டோ"</li>
+<li>daa= "டா"</li>
+<li>duu= "டூ"</li>
+<li>dii= "டீ"</li>
+<li>da= "ட"</li>
+<li>di= "டி"</li>
+<li>dI= "டீ"</li>
+<li>dA= "டா"</li>
+<li>de= "டெ"</li>
+<li>dE= "டே"</li>
+<li>do= "டொ"</li>
+<li>dO= "டோ"</li>
+<li>du= "டு"</li>
+<li>dU= "டூ"</li>
+<li>d= "ட்"</li>
+<li>nau= "னௌ"</li>
+<li>nai= "னை"</li>
+<li>nee= "னே"</li>
+<li>noo= "னோ"</li>
+<li>naa= "னா"</li>
+<li>nuu= "னூ"</li>
+<li>nii= "னீ"</li>
+<li>na= "ன"</li>
+<li>ni= "னி"</li>
+<li>nI= "னீ"</li>
+<li>nA= "னா"</li>
+<li>ne= "னெ"</li>
+<li>nE= "னே"</li>
+<li>no= "னொ"</li>
+<li>nO= "னோ"</li>
+<li>nu= "னு"</li>
+<li>nU= "னூ"</li>
+<li>n= "ன்"</li>
+<li>Nau= "ணௌ"</li>
+<li>Nai= "ணை"</li>
+<li>Nee= "ணே"</li>
+<li>Noo= "ணோ"</li>
+<li>Naa= "ணா"</li>
+<li>Nuu= "ணூ"</li>
+<li>Nii= "ணீ"</li>
+<li>Na= "ண"</li>
+<li>Ni= "ணி"</li>
+<li>NI= "ணீ"</li>
+<li>NA= "ணா"</li>
+<li>Ne= "ணெ"</li>
+<li>NE= "ணே"</li>
+<li>No= "ணொ"</li>
+<li>NO= "ணோ"</li>
+<li>Nu= "ணு"</li>
+<li>NU= "ணூ"</li>
+<li>N= "ண்"</li>
+<li>lau= "லௌ"</li>
+<li>lai= "லை"</li>
+<li>lee= "லே"</li>
+<li>loo= "லோ"</li>
+<li>laa= "லா"</li>
+<li>luu= "லூ"</li>
+<li>lii= "லீ"</li>
+<li>la= "ல"</li>
+<li>li= "லி"</li>
+<li>lI= "லீ"</li>
+<li>lA= "லா"</li>
+<li>le= "லெ"</li>
+<li>lE= "லே"</li>
+<li>lo= "லொ"</li>
+<li>lO= "லோ"</li>
+<li>lu= "லு"</li>
+<li>lU= "லூ"</li>
+<li>l= "ல்"</li>
+<li>Lau= "ளௌ"</li>
+<li>Lai= "ளை"</li>
+<li>Lee= "ளே"</li>
+<li>Loo= "ளோ"</li>
+<li>Laa= "ளா"</li>
+<li>Luu= "ளூ"</li>
+<li>Lii= "ளீ"</li>
+<li>La= "ள"</li>
+<li>Li= "ளி"</li>
+<li>LI= "ளீ"</li>
+<li>LA= "ளா"</li>
+<li>Le= "ளெ"</li>
+<li>LE= "ளே"</li>
+<li>Lo= "ளொ"</li>
+<li>LO= "ளோ"</li>
+<li>Lu= "ளு"</li>
+<li>LU= "ளூ"</li>
+<li>L= "ள்"</li>
+<li>vau= "வௌ"</li>
+<li>vai= "வை"</li>
+<li>vee= "வே"</li>
+<li>voo= "வோ"</li>
+<li>vaa= "வா"</li>
+<li>vuu= "வூ"</li>
+<li>vii= "வீ"</li>
+<li>va= "வ"</li>
+<li>vi= "வி"</li>
+<li>vI= "வீ"</li>
+<li>vA= "வா"</li>
+<li>ve= "வெ"</li>
+<li>vE= "வே"</li>
+<li>vo= "வொ"</li>
+<li>vO= "வோ"</li>
+<li>vu= "வு"</li>
+<li>vU= "வூ"</li>
+<li>v= "வ்"</li>
+<li>gau= "கௌ"</li>
+<li>gai= "கை"</li>
+<li>gee= "கே"</li>
+<li>goo= "கோ"</li>
+<li>gaa= "கா"</li>
+<li>guu= "கூ"</li>
+<li>gii= "கீ"</li>
+<li>ga= "க"</li>
+<li>gi= "கி"</li>
+<li>gI= "கீ"</li>
+<li>gA= "கா"</li>
+<li>ge= "கெ"</li>
+<li>gE= "கே"</li>
+<li>go= "கொ"</li>
+<li>gO= "கோ"</li>
+<li>gu= "கு"</li>
+<li>gU= "கூ"</li>
+<li>g= "க்"</li>
+<li>au= "ஔ"</li>
+<li>ai= "ஐ"</li>
+<li>aa= "ஆ"</li>
+<li>ee= "ஏ"</li>
+<li>ii= "ஈ"</li>
+<li>uu= "ஊ"</li>
+<li>oo= "ஓ"</li>
+<li>-1000= "௲"</li>
+<li>-100= "௱"</li>
+<li>-10= "௰"</li>
+<li>-1= "௧"</li>
+<li>-2= "௨"</li>
+<li>-3= "௩"</li>
+<li>-4= "௪"</li>
+<li>-5= "௫"</li>
+<li>-6= "௬"</li>
+<li>-7= "௭"</li>
+<li>-8= "௮"</li>
+<li>-9= "௯"</li>
+<li>i= "இ"</li>
+<li>I= "ஈ"</li>
+<li>a= "அ"</li>
+<li>A= "ஆ"</li>
+<li>e= "எ"</li>
+<li>E= "ஏ"</li>
+<li>i= "இ"</li>
+<li>I= "ஈ"</li>
+<li>u= "உ"</li>
+<li>U= "ஊ"</li>
+<li>o= "ஒ"</li>
+<li>O= "ஓ"</li>
+<li>x= "௯"</li>
+<li>q= "ஃ"</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="js/dark.js" defer></script>
+  <script src="js/engine.js" defer></script>
+   
+
+
+</body>
+
+</br>
+
+  
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12  text-center  my-3">
+        <div class="form-check form-switch">
+          
+          <label class="form-check-label" for="flexSwitchCheckChecked">Switch To Darkmode/Lightmode <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onclick="themeToggle()">  </label> 
+       
+        </div>
+        <p>&copy; 2021-2024 Designed and built the<a href="https://cosmo.com.lk/" target=”_blank”> Cosmo ETSP</a>  | Made in Sri Lanka 🇱🇰 </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

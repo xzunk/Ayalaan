@@ -1,0 +1,182 @@
+
+  :root {
+	--bg: #fff;
+	--color: #131314;
+	--btncolor:#0abf5223;
+	--btntext: #000000;
+	--btnboader: rgb(0, 0, 0);
+	--btnhoverbk: #0696401e;
+	--fcbackground: #ffffff;
+	--fcboader: #000000;
+	--tgbtn: #333;
+	--sbtrak: #5f6368;
+	--thumb: #c3c3c3;
+  }
+  .dark {
+	--bg:  	#1e1e1e;
+	--color: rgb(238, 238, 238);
+	--btncolor: #303134;
+	--btntext: rgb(238, 238, 238);
+	--btnboader: rgb(138 141 145);
+	--btnhoverbk:  #085c59;
+	--fcbackground:#1e1e1e;
+	--fcboader: #8899ac;
+	--tgbtn: rgb(250 250 250);
+	--sbtrak: #737373;
+	--thumb: #555;
+  }
+  ::focus {
+	
+  }
+  ::-webkit-scrollbar {
+	width: 8px;
+  }
+  /* Track */
+  
+  ::-webkit-scrollbar-track {
+	background: var(--sbtrak);
+  }
+  /* Handle */
+  
+  ::-webkit-scrollbar-thumb {
+	background: var(--thumb);
+  }
+  /* Handle on hover */
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: var(--thumb);
+  }
+  body {
+	font-family: "Outfit", sans-serif;                                   
+	font-weight: 400;
+	background-color: var(--bg);
+	border-top:  #00f2ea 2px solid;
+	font-size: 15px;
+	color: var(--color);
+  }
+  .navbar{
+    background-color: #f2f2f241;   
+  }
+  .btn {
+	background-color: var(--btncolor);
+	border-color: var(--btnboader);
+	color: var(--btntext);
+	border-radius: 5px;
+	font-size: 14px;
+  }
+  .btn:hover {
+	background-color: var(--btnhoverbk);
+	border-color: var(--btnboader);
+	color: var(--btntext);
+	border-radius: 5px;
+  }
+  
+  textarea.form-control {
+	height: 180px;
+  }
+
+
+
+  .form-control {
+         
+	background-color: var(--fcbackground);
+	color: var(--color);
+	font-family: "Outfit","Noto Sans Tamil", sans-serif;
+	font-size: 20px;
+	border: 1px solid var(--fcboader);
+	border-radius: 5px;
+	flex-direction: column;
+	display: flex;
+	margin-bottom: 5px;
+  }
+  .form-control:hover {
+	border: 1px solid var(--fcboader);
+	color: var(--color);
+	background-color: var(--fcbackground);
+  }
+  .form-control:visited,
+  .form-control:focus {
+	background-color: var(--fcbackground);
+	color: var(--color);
+	border-color: #FF8225 5px;
+  }
+  .popover {
+	border: 0.5mm solid var(--fcboader);
+	opacity: 0.99;
+  }
+
+ 
+    
+
+  .modal-body,
+  .modal-header,
+  .modal-footer {
+	background-color: var(--fcbackground);
+	font-family: sans-serif;
+  }
+  h1 {
+	font-size: 1.2rem;
+  }
+  .h2 {
+	font-weight: 200;
+	font-size: 8px;
+  }
+  .mt-3 {
+	font-size: 12px;
+  }
+  p {
+	font-size: 14px;
+	font-weight: 400;
+  }
+  h2 {
+	font-size: 20px;
+	font-weight: 600;
+  }
+  a {
+	color: #12f857;
+	text-decoration: none;
+  }
+  
+  .homeb {
+	margin: auto 5%;
+  }
+  
+  
+  @media only screen and (max-width: 480px) {
+	textarea.form-control {
+	  height: 230px;
+	}
+	body {
+	  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+		Arial, sans-serif;
+	}
+	.col-4{
+		display: none;
+	}
+  }
+  
+  @media screen and (max-width: 900px) {
+	.row {
+	  margin: 0em;
+	}
+	body {
+	  overflow-x: hidden;
+	}
+	.h1 {
+	  font-size: 1.5rem;
+	}
+	.homeb {
+	  margin: auto;
+	}
+	.col-4{
+		display: none;
+	}
+  }
+  
+  @media (min-width: 1920px) and (max-width: 2560px) {
+	textarea.form-control {
+	  height: 200px;
+	}
+  }
+  
